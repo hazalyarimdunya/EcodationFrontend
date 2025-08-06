@@ -1,0 +1,58 @@
+:root {
+  --primary-color: #00c2cb;
+  --background-color: #1c1c1c;
+  --text-color: #fff;
+  --white-color: #fff;
+  --danger-color: #e74c3c;
+  --secondary-color: #3498db;
+  --accent-color: #8e44ad;
+  --dark-color: #000;
+  --button-radius: 8px;
+  --customise-font-family: 'Segoe UI', sans-serif;
+}
+* {
+  margin: 0; /* Varsayılan dış boşlukları sıfırlar */
+  padding: 0; /* Varsayılan iç boşlukları sıfırlar */
+  box-sizing: border-box; /* width ve height hesaplamalarına padding ve border'ı dahil eder */
+  font-family: var(--customise-font-family); /* root değişkeninde tanımlı özel fontu uygular */
+}
+html {
+  font-size: 20px; /* Sayfanın temel font boyutunu 20px olarak ayarlar (rem için referans) */
+}
+
+body {
+  background-color: #79ab8f;/* Arka planı sağa doğru gri-siyah degrade yapar */
+  color: var(--text-color); /* root değişkeninden gelen metin rengini uygular */
+  position: relative; /* Göreceli konumlandırma: içindeki mutlak konumlu öğeler için referans */
+  line-height: 1.6; /* Satırlar arasındaki yüksekliği artırarak okunabilirliği artırır */
+  overflow-x: hidden; /* Yatay kaydırmayı engeller */
+  /* Aşağıdaki satırlar yorum satırında, ihtiyaç halinde açılabilir:
+    display: flex;
+    justify-content: center;  
+    align-items: center;
+    min-height: 100vh;
+    padding: 2rem; */
+}
+a {
+  text-decoration: none; /* Linklerde alt çizgiyi kaldırır */
+  color: inherit; /* Link rengini parent elemanın rengiyle aynı yapar */
+}
+#navbar_first{
+    background-color: rgba(44, 76, 22, 0.7) !important; /* Navbar arka plan rengini yarı saydam kırmızı yapar */
+    /* Metin rengini root değişkeninden alır */
+    top: 0;
+    width: 100%;
+    position: fixed;
+    z-index: 1000; /* Diğer öğelerin üstünde görünmesini sağlar */
+     /* Üst ve alt için 1rem, sağ ve sol için 2rem boşluk ekler */
+
+}
+ #navbar_first .nav .nav-link {
+  color: var(--text-color); /* Link rengi root değişkeninden gelir */
+  font-size: 0.85rem; /* Küçük yazı boyutu */
+  padding: 5px 5px; /* Link iç boşlukları */
+  transition: color 0.3s ease; /* Renk değişimi için yumuşak geçiş efekti */
+}
+
+
+ 
