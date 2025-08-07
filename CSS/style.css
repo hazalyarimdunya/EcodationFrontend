@@ -8,20 +8,22 @@
   --accent-color: #8e44ad;
   --dark-color: #000;
   --button-radius: 8px;
-  --customise-font-family: 'Segoe UI', sans-serif;
+  --customise-font-family: "Segoe UI", sans-serif;
 }
 * {
   margin: 0; /* Varsayılan dış boşlukları sıfırlar */
   padding: 0; /* Varsayılan iç boşlukları sıfırlar */
   box-sizing: border-box; /* width ve height hesaplamalarına padding ve border'ı dahil eder */
-  font-family: var(--customise-font-family); /* root değişkeninde tanımlı özel fontu uygular */
+  font-family: var(
+    --customise-font-family
+  ); /* root değişkeninde tanımlı özel fontu uygular */
 }
 html {
   font-size: 20px; /* Sayfanın temel font boyutunu 20px olarak ayarlar (rem için referans) */
 }
 
 body {
-  background-image: url('../images/bg_image.jpeg');
+  background-image: url("../images/bg_image.jpeg");
   background-repeat: no-repeat;
   color: var(--text-color); /* root değişkeninden gelen metin rengini uygular */
   line-height: 1.6; /* Satırlar arasındaki yüksek liği artırarak okunabilirliği artırır */
@@ -32,51 +34,69 @@ a {
   text-decoration: none; /* Linklerde alt çizgiyi kaldırır */
   color: inherit; /* Link rengini parent elemanın rengiyle aynı yapar */
 }
-#navbar_first{
-   background-color: var(--dark-color);
-   height: 60px;
-   width: 100%;
-  
-
+#navbar_first {
+  background-color: var(--dark-color);
+  height: 60px;
+  width: 100%;
 }
- #navbar_first .nav .nav-link {
+#navbar_first .nav .nav-link {
   color: var(--text-color); /* Link rengi root değişkeninden gelir */
   font-size: 0.85rem; /* Küçük yazı boyutu */
   padding: 5px 5px; /* Link iç boşlukları */
   transition: color 0.3s ease; /* Renk değişimi için yumuşak geçiş efekti */
 }
 #navbar_second {
-   margin-top: 60px;
+  margin-top: 60px;
 }
-  
+
 #navbar_second .navbar-brand img {
   width: 50px;
   height: 50px;
   border-radius: 50%;
 }
-    /* Responsive padding */
-    .custom-navbar-space {
-      padding-left: 1rem;
-      padding-right: 1rem;
-    }
-  @media (min-width: 576px) {
-      .custom-navbar-space {
-        padding-left: 2rem;
-        padding-right: 2rem;
-      }
-    }
+/* Responsive padding */
+.custom-navbar-space {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+@media (min-width: 576px) {
+  .custom-navbar-space {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
 
-    @media (min-width: 768px) {
-      .custom-navbar-space {
-        padding-left: 3rem;
-        padding-right: 3rem;
-      }
-    }
+@media (min-width: 768px) {
+  .custom-navbar-space {
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+}
 
-    @media (min-width: 992px) {
-      .custom-navbar-space {
-        padding-left: 5rem;
-        padding-right: 5rem;
-      }
-    }
+@media (min-width: 992px) {
+  .custom-navbar-space {
+    padding-left: 5rem;
+    padding-right: 5rem;
+  }
+}
 
+section {
+  background-color: rgb(29, 28, 28);
+}
+#section_title {
+  font-size: 35px;
+  text-align: center;
+  font-weight: bold;
+}
+#section_title::after {
+  display: block;
+  background-color: rgb(195, 146, 13);
+  width: 200px;
+  height: 3px;
+  content: "";
+  margin-top: 10px;
+  margin-bottom: 40px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
