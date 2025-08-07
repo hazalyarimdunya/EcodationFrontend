@@ -21,30 +21,22 @@ html {
 }
 
 body {
-  background-color: #79ab8f;/* Arka planı sağa doğru gri-siyah degrade yapar */
+  background-image: url('../images/bg_image.jpeg');
+  background-repeat: no-repeat;
   color: var(--text-color); /* root değişkeninden gelen metin rengini uygular */
-  position: relative; /* Göreceli konumlandırma: içindeki mutlak konumlu öğeler için referans */
-  line-height: 1.6; /* Satırlar arasındaki yüksekliği artırarak okunabilirliği artırır */
+  line-height: 1.6; /* Satırlar arasındaki yüksek liği artırarak okunabilirliği artırır */
   overflow-x: hidden; /* Yatay kaydırmayı engeller */
-  /* Aşağıdaki satırlar yorum satırında, ihtiyaç halinde açılabilir:
-    display: flex;
-    justify-content: center;  
-    align-items: center;
-    min-height: 100vh;
-    padding: 2rem; */
+  position: relative;
 }
 a {
   text-decoration: none; /* Linklerde alt çizgiyi kaldırır */
   color: inherit; /* Link rengini parent elemanın rengiyle aynı yapar */
 }
 #navbar_first{
-    background-color: rgba(44, 76, 22, 0.7) !important; /* Navbar arka plan rengini yarı saydam kırmızı yapar */
-    /* Metin rengini root değişkeninden alır */
-    top: 0;
-    width: 100%;
-    position: fixed;
-    z-index: 1000; /* Diğer öğelerin üstünde görünmesini sağlar */
-     /* Üst ve alt için 1rem, sağ ve sol için 2rem boşluk ekler */
+   background-color: var(--dark-color);
+   height: 60px;
+   width: 100%;
+  
 
 }
  #navbar_first .nav .nav-link {
@@ -53,6 +45,38 @@ a {
   padding: 5px 5px; /* Link iç boşlukları */
   transition: color 0.3s ease; /* Renk değişimi için yumuşak geçiş efekti */
 }
+#navbar_second {
+   margin-top: 60px;
+}
+  
+#navbar_second .navbar-brand img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+    /* Responsive padding */
+    .custom-navbar-space {
+      padding-left: 1rem;
+      padding-right: 1rem;
+    }
+  @media (min-width: 576px) {
+      .custom-navbar-space {
+        padding-left: 2rem;
+        padding-right: 2rem;
+      }
+    }
 
+    @media (min-width: 768px) {
+      .custom-navbar-space {
+        padding-left: 3rem;
+        padding-right: 3rem;
+      }
+    }
 
- 
+    @media (min-width: 992px) {
+      .custom-navbar-space {
+        padding-left: 5rem;
+        padding-right: 5rem;
+      }
+    }
+
