@@ -50,12 +50,22 @@
         <div class="d-flex justify-content-between align-items-center w-100">
           <ul id="loginIcons" class="nav">
             <li class="nav-item me-3">
-              <a href="#" class="nav-link">
+              <a
+                href="#"
+                class="nav-link"
+                data-bs-toggle="modal"
+                data-bs-target="#myRegisterModal"
+              >
                 <i class="fa-solid fa-user-secret"></i>
               </a>
             </li>
             <li class="nav-item">
-              <a href="#" class="nav-link">
+              <a
+                href="#"
+                class="nav-link"
+                data-bs-toggle="modal"
+                data-bs-target="#myLoginModal"
+              >
                 <i class="fa-solid fa-address-card"></i>
               </a>
             </li>
@@ -85,6 +95,118 @@
         </div>
       </div>
     </nav>
+    <!-- Register Modal -->
+    <div class="modal" id="myRegisterModal">
+      <div class="modal-dialog modal-dialog-center">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h3 class="modal-title">Register</h3>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <form action="" id="registerForm">
+              <div>
+                <input
+                  type="email"
+                  id="email"
+                  class="form-control"
+                  placeholder="Enter e-mail"
+                />
+              </div>
+              <br />
+              <div>
+                <input
+                  type="password"
+                  id="pass"
+                  class="form-control"
+                  placeholder="Enter password"
+                />
+              </div>
+              <br />
+
+              <div>
+                <input
+                  type="password"
+                  id="repass"
+                  class="form-control"
+                  placeholder="Enter password"
+                />
+              </div>
+              <div class="modal-footer">
+                <button
+                  type="button"
+                  class="btn btn-secondary"
+                  data-bs-dismiss="modal"
+                >
+                  Close
+                </button>
+                <button
+                  type="submit"
+                  class="btn btn-primary"
+                  form="registerForm"
+                >
+                  Register
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Login Modal -->
+    <div class="modal" id="myLoginModal">
+      <div class="modal-dialog modal-dialog-center">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h3 class="modal-title">Login</h3>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <form action="" class="loginForm">
+              <div>
+                <input
+                  id="email"
+                  type="email"
+                  class="form-control"
+                  placeholder="Enter e-mail"
+                />
+              </div>
+              <br/>
+
+              <div>
+                <input
+                  id="pass"
+                  type="password"
+                  class="form-control"
+                  placeholder="Enter password"
+                />
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Close
+            </button>
+            <button type="submit" class="btn btn-primary" form="loginForm">
+              Submit
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <!-- second navbar -->
     <nav
