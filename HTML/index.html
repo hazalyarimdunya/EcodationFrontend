@@ -44,11 +44,15 @@
     <link rel="stylesheet" href="../CSS/style.css" />
   </head>
   <body>
+    <!-- backtotop -->
+    <span id="back_top_span"></span>
+
     <!-- first navbar -->
     <nav id="navbar_first" class="navbar navbar-expand-sm fixed-top">
       <div class="container">
         <div class="d-flex justify-content-between align-items-center w-100">
-          <ul id="loginIcons" class="nav">
+          <!-- left -->
+          <ul id="navbar_first_left" class="nav">
             <li class="nav-item me-3">
               <a
                 href="#"
@@ -70,26 +74,57 @@
               </a>
             </li>
           </ul>
-          <ul id="socialIcons" class="nav">
+          <!-- right -->
+          <ul
+            id="navbar_first_right"
+            class="nav d-flex justify-content-center align-items-center"
+          >
             <li class="nav-item">
-              <a href="#" class="nav-link"
-                ><i class="fa-brands fa-github"></i
-              ></a>
+              <!-- Search -->
+              <form class="search-form me-2">
+                <div
+                  class="search-container d-flex justify-content-center align-items-center me-1"
+                >
+                  <input
+                    id="search_id"
+                    type="text"
+                    class="form-control"
+                    placeholder="Search anything!"
+                  />
+                  <button class="search-button" type="submit">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                  </button>
+                </div>
+              </form>
             </li>
             <li class="nav-item">
-              <a href="#" class="nav-link"
-                ><i class="fa-brands fa-linkedin"></i
-              ></a>
+              <!--Dark Mode -->
+              <div class="nav-item me-2">
+                <button class="nav-link bg-transparent">
+                  <i class="fa-regular fa-moon"></i>
+                </button>
+              </div>
             </li>
-            <li class="nav-item">
-              <a href="#" class="nav-link"
-                ><i class="fa-brands fa-instagram"></i
+            <!-- Language -->
+            <li class="nav-item dropdown">
+              <a
+                href="#"
+                class="dropdown-toggle nav-link"
+                data-bs-toggle="dropdown"
+                ><i class="fa-solid fa-language"></i
               ></a>
-            </li>
-            <li class="nav-item">
-              <a href="#" class="nav-link"
-                ><i class="fa-brands fa-facebook"></i
-              ></a>
+              <ul class="dropdown-menu dropdown-menu-end">
+                <li>
+                  <a href="#" class="dropdown-item"
+                    >EN<i class="fa-solid fa-flag-usa"></i
+                  ></a>
+                </li>
+                <li>
+                  <a href="#" class="dropdown-item"
+                    >TR<i class="fa-solid fa-flag-usa"></i
+                  ></a>
+                </li>
+              </ul>
             </li>
           </ul>
         </div>
@@ -180,7 +215,7 @@
                   placeholder="Enter e-mail"
                 />
               </div>
-              <br/>
+              <br />
 
               <div>
                 <input
@@ -215,7 +250,7 @@
     >
       <div class="container-fluid">
         <a href="#" class="navbar-brand">
-          <img id="logo_image" src="../images/self_image.png" alt="Logo" />
+          <img id="logo_image" src="../images/logo-5.png" alt="Logo" />
         </a>
         <button
           class="navbar-toggler"
@@ -232,38 +267,32 @@
         >
           <ul class="navbar-nav">
             <li class="nav-item">
-              <a href="#" class="nav-link active">Home</a>
+              <a href="#" class="nav-link active">HOME</a>
             </li>
             <li class="nav-item">
-              <a href="#" class="nav-link">Works</a>
-            </li>
-            <li class="nav-item">
-              <a href="#" class="nav-link">Achievements</a>
-            </li>
-            <li class="nav-item">
-              <a href="#" class="nav-link">News</a>
-            </li>
-            <li class="nav-item">
-              <a href="#" class="nav-link">About</a>
+              <a href="#" class="nav-link">ABOUT</a>
             </li>
             <li class="nav-item dropdown">
               <a
                 href="#"
                 class="nav-link dropdown-toggle"
                 data-bs-toggle="dropdown"
-                >Blog</a
+                >TECHNOLOJIES</a
               >
               <ul class="dropdown-menu">
                 <li>
-                  <a href="#" class="dropdown-item">Spor</a>
+                  <a href="#" class="dropdown-item">HTML</a>
                 </li>
                 <li>
-                  <a href="#" class="dropdown-item">Education</a>
+                  <a href="#" class="dropdown-item">CSS</a>
+                </li>
+                <li>
+                  <a href="#" class="dropdown-item">JAVASCRIPT</a>
                 </li>
               </ul>
             </li>
             <li class="nav-item">
-              <a href="#" class="nav-link">Contact</a>
+              <a href="#" class="nav-link">CONTACT</a>
             </li>
           </ul>
         </div>
@@ -275,59 +304,193 @@
       class="text-center d-flex flex-column justify-content-center align-items-center min-vh-100"
     >
       <div>
-        <h3>
-          <b>Hazal Yarimdunya</b>
-        </h3>
-        <p style="font-size: 30px; margin: 10px 0">
-          I'AM A FULLSTACK DEVELOPER
-        </p>
-        <p style="font-size: 20px; font-style: italic; margin: 10px 0">
-          Someone who wants to dive deeper...
+        <h2>Kodun Gücünü Keşfet!</h2>
+
+        <p>
+          Yazılım dünyasındaki en güncel gelişmeleri, ipuçlarını ve
+          deneyimlerimizi sizinle paylaşıyoruz. Ekibimiz, kodlamadan yeni
+          teknolojilere kadar geniş bir yelpazede içerikler üretiyor. Amacımız,
+          hem yeni başlayanlara hem de profesyonellere ilham vermek. Birlikte
+          öğrenelim, birlikte geliştirelim! <br />
+          🚀
         </p>
       </div>
     </header>
 
     <!-- Main start -->
     <main id="main-id">
-      <section>
-        <div class="row justify-content-center g-3 text-center w-100">
-          <h3 id="section_title">WORKS</h3>
-          <div class="col-sm-12 col-md-6 col-lg-4 text-center">
-            <i class="fa-solid fa-mobile"></i>
-            <h4>MOBILE DEVELOPER</h4>
+      <section class="container-fluid" id="tech">
+        <div class="row justify-content-center text-center bg-dark">
+          <h3 id="section_title">TECHNOLOJIES</h3>
+          <div class="col col-sm-12 col-md-4 col-lg-4 text-center">
+            <div id="section-icons">
+              <i class="fa-brands fa-html5"></i>
+              <i class="fa-brands fa-bootstrap"></i>
+              <i class="fa-brands fa-square-js"></i>
+            </div>
+
+            <h6>FRONTEND DEVELOPER</h6>
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus
               cumque, voluptatum, asperiores, incidunt quisquam magnam
-              exercitationem enim laboriosam minima sed. Doloribus cumque,
-              voluptatum, asperiores, incidunt quisquam magnam exercitationem
-              enim laboriosam minima sed.
+              exercitationem enim laboriosam minima sed.
             </p>
           </div>
-          <div class="col-sm-12 col-md-6 col-lg-4 text-center">
-            <i class="fa-solid fa-mobile"></i>
-            <h4>MOBILE DEVELOPER</h4>
+          <div class="col col-sm-12 col-md-4 col-lg-4 text-center">
+            <div id="section-icons">
+              <i class="fa-brands fa-java"></i>
+              <i class="fa-brands fa-python"></i>
+              <i class="fa-brands fa-php"></i>
+            </div>
+
+            <h6>BACKEND DEVELOPER</h6>
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus
               cumque, voluptatum, asperiores, incidunt quisquam magnam
-              exercitationem enim laboriosam minima sed. Doloribus cumque,
-              voluptatum, asperiores, incidunt quisquam magnam exercitationem
-              enim laboriosam minima sed.
+              exercitationem enim laboriosam minima sed.
             </p>
           </div>
-          <div class="col-sm-12 col-md-6 col-lg-4 text-center">
-            <i class="fa-solid fa-mobile"></i>
-            <h4>MOBILE DEVELOPER</h4>
+          <div class="col col-sm-12 col-md-4 col-lg-4 text-center">
+            <div id="section-icons">
+              <i class="fa-brands fa-apple"></i>
+              <i class="fa-brands fa-android"></i>
+              <i class="fa-brands fa-swift"></i>
+            </div>
+
+            <h6>MOBILE DEVELOPER</h6>
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus
               cumque, voluptatum, asperiores, incidunt quisquam magnam
-              exercitationem enim laboriosam minima sed. Doloribus cumque,
-              voluptatum, asperiores, incidunt quisquam magnam exercitationem
-              enim laboriosam minima sed.
+              exercitationem enim laboriosam minima sed.
             </p>
           </div>
         </div>
       </section>
+      <section class="container-fluid" id="about">
+        <div class="row justify-content-center text-center">
+          <h3 id="section_title">ABOUT</h3>
+          <div
+            class="col-1 col-sm-12 col-md-6 text-center rounded animate__animated hidden animate__fadeInLeft"
+          >
+            <h4>Our Mision</h4>
+            <p>
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempore,
+              blanditiis quam? Maiores eligendi nisi iusto tempora. Porro,
+              placeat. Nisi ea numquam enim laborum architecto sunt at eveniet
+              beatae consectetur id! Officiis, repudiandae sequi dolorem
+              excepturi expedita sint ullam ea ut corrupti. Tempora reiciendis
+              sapiente nobis? Voluptas re rum sint impedit ipsum eaque unde
+              dolor ad necessitatibus minus vitae, ab in cupiditate. Doloribus
+              deserunt accusantium possimus numquam porro perferendis fuga
+              doloremque incidunt. Unde, ea! Blanditiis deserunt facilis ut
+              illum hic ea rem, animi architecto pariatur maiores eligendi
+              necessitatibus quos quis voluptatum perferendis? Explicabo
+              obcaecati quidem veritatis aliquid aliquam facere facilis magnam
+              ad laborum voluptate! Quidem repellat accusantium magni cumque
+              veritatis magnam error nostrum quaerat a tempora, praesentium
+              harum voluptate impedit deserunt ut! Nam accusamus dicta molestias
+              unde eaque blanditiis, eum labore nihil voluptate quasi quisquam
+              ipsa illum libero reiciendis itaque quis dolores illo adipisci
+              tempore repudiandae explicabo exercitationem ullam. Ipsa,
+              necessitatibus libero.
+            </p>
+          </div>
+
+          <div
+            class="col-2 col-sm-12 col-md-6 text-center rounded animate__animated hidden animate__fadeInRight"
+          >
+            <h4>Our Vission</h4>
+            <p>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eligendi
+              sit quae modi dicta velit repellendus dolorem ullam labore illum
+              vitae vel, sunt maiores repellat, optio sequi laudantium corrupti
+              voluptatem excepturi. Quisquam non culpa consequuntur velit qui,
+              facilis corporis ipsa explicabo atque aperiam laborum cum,
+              consectetur dignissimos cumque alias dolore. Quod impedit maiores
+              quidem inventore provident dolorem veritatis ab earum sit!
+              Delectus, sunt corporis fugiat libero temporibus quis ipsa
+              architecto ad! Minus nisi sunt mollitia saepe aliquam nihil rerum
+              nam ipsa. Illo quisquam atque voluptas possimus saepe dignissimos
+              enim adipisci nulla. Quam, expedita. Veniam similique optio
+              nostrum voluptates dolorum rem aperiam fuga quibusdam itaque
+              error, esse enim provident cum labore corrupti consequuntur natus
+              neque harum atque quam nemo ipsum aliquid facilis! Velit ad
+              officiis minus quisquam, eos ab a maiores explicabo eum voluptates
+              sint illo cumque natus necessitatibus reprehenderit, dolore quos
+              quaerat accusamus odit, ipsum ut debitis obcaecati? Nemo, rerum
+              ipsam.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="container-fluid" id="contact">
+        <div class="row justify-content-center text-center">
+          <h3 id="section_title">CONTACT US</h3>
+          <div
+            id="col-1"
+            class="col col-sm-12 col-md-6 col-lg-6 justify-content-center"
+          >
+            <img
+              src="../images/24-hours-customer.png"
+              alt="Contact Us"
+              class="img-fluid"
+            />
+            <p>+90 555 555 55 55</p>
+          </div>
+          <div
+            id="col-2"
+            class="col col-sm-12 col-lg-6 col-md-6 d-flex flex-column align-items-center"
+          >
+            <p>Have questions? Shoot us an email.</p>
+            <input type="text" class="name" placeholder="Enter your name" />
+            <input type="email" class="email" placeholder="Enter your email" />
+            <textarea
+              rows="5"
+              class="message"
+              placeholder="Type your message here"
+            ></textarea>
+            <button type="submit" class="btn btn-secondary m-2">SEND</button>
+          </div>
+        </div>
+      </section>
     </main>
+    <!-- Footer -->
+
+    <footer class="container-fluid bg-dark" id="footer">
+      <div class="d-flex justify-content-between align-items-center">
+        <!-- social icons and copy text -->
+        <div class="d-flex flex-column align-items-center mx-auto">
+          <div class="d-flex justify-content-center" id="col-1">
+            <a href="https://github.com/hazalyarimdunya" class="nav-link"
+              ><i class="fa-brands fa-github"></i
+            ></a>
+            <a
+              href="https://tr.linkedin.com/in/hazal-yarimdünya-a47751190"
+              class="nav-link"
+              ><i class="fa-brands fa-linkedin"></i
+            ></a>
+            <a href="https://www.instagram.com/hazal_yrmdny/" class="nav-link"
+              ><i class="fa-brands fa-instagram"></i
+            ></a>
+            <a href="#" class="nav-link"
+              ><i class="fa-brands fa-facebook"></i
+            ></a>
+          </div>
+          <div class="d-flex justify-content-center">
+            <i class="fa-regular fa-copyright me-1"></i>
+            <p class="mb-0">2024-2025 Code Diary All Rights Reserved</p>
+          </div>
+        </div>
+
+        <!-- Back to Top -->
+        <div id="back_top_id" class="d-flex align-items-center">
+          <a href="#back_top_span">
+            <i class="fa-regular fa-circle-up"></i>
+          </a>
+        </div>
+      </div>
+    </footer>
 
     <!-- JS Import -->
     <noscript>

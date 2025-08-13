@@ -8,7 +8,7 @@
   --accent-color: #8e44ad;
   --dark-color: #000;
   --button-radius: 8px;
-  --customise-font-family: "Segoe UI", sans-serif;
+  --customise-font-family: "Cambria, Cochin";
 }
 * {
   margin: 0; /* Varsayılan dış boşlukları sıfırlar */
@@ -34,42 +34,203 @@ a {
   text-decoration: none; /* Linklerde alt çizgiyi kaldırır */
   color: inherit; /* Link rengini parent elemanın rengiyle aynı yapar */
 }
+
 #navbar_first {
   background-color: var(--dark-color);
   height: 60px;
   width: 100%;
-}
-#navbar_first .nav .nav-link {
-  color: var(--text-color); /* Link rengi root değişkeninden gelir */
-  font-size: 0.85rem; /* Küçük yazı boyutu */
-  padding: 5px 5px; /* Link iç boşlukları */
-  transition: color 0.3s ease; /* Renk değişimi için yumuşak geçiş efekti */
-}
-#navbar_second {
-  margin-top: 60px;
+  /* position: relative; /* z-index çalışsın diye */
+  /* z-index: 2000;  */
+
+} 
+.navbar .nav-item.dropdown .dropdown-menu {
+  position: absolute;
+  min-width: unset;     /* Bootstrap'in 10rem varsayılanını kaldır */
+  width: 150px;   
+  background-color:rgb(211, 181, 71);      /* Buraya istediğin değeri yaz */
 }
 
+.dropdown-menu .dropdown-item:hover {
+  background-color: rgb(171, 138, 15);
+}
+#navbar_second { 
+  /* position: relative; */
+  z-index: 1000;
+  margin-top: 60px; 
+}
+#main-id #section_title {
+  text-align: center;
+  font-weight: bold;
+  margin-top: 20px;
+
+}
+#main-id #section_title::after {
+  display: block;
+  background-color: rgb(231, 189, 72);
+  width: 300px;
+  height: 3px;
+  content: "";  
+  margin-top: 10px;
+  margin-bottom: 60px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+#main-id  #tech .col {
+  background-color: rgb(83, 79, 79);
+  margin: 20px;
+  padding: 20px;
+  width: 400px ;
+
+}
+#main-id  #tech #section-icons{
+  color: rgb(231, 189, 72);
+  font-size: 40px;
+  margin-top: 10px;
+} 
+#main-id h6 {
+  font-weight: bold;  
+}
+#main-id p{
+  padding: 30px;  
+  font-size: 20px; 
+}
+
+#main-id #about {
+  background-image:  url("../images/smooth-brown-background.avif");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+#main-id #about .col-1 {   
+  padding: 10px; 
+  margin: 30px;   
+  width: 700px;
+  background-color: rgb(149, 104, 56);
+}
+#main-id #about .col-2 {  
+  background-color: rgb(149, 104, 56);
+  margin: 30px;
+  padding: 10px;    
+  width: 700px;
+} 
+
+
+  #main-id #contact { 
+  background-color:  rgb(83, 79, 79);
+  margin-top: -20px;
+ }
+
+
+ #main-id #contact input,textarea {
+  width: 350px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  margin-top: 0px;
+
+ } 
+  #main-id #contact img{
+    width: 370px; 
+    height: 370px;
+   border-radius: 50%;
+  }
+    #main-id #contact p{
+   font-size: 25px;
+   margin-top: -15px;
+  }
+
+#footer #col-1 a {
+  margin: 10px;
+  font-size: 30px;
+}
+.footer #col-2 {
+  width: 300px; 
+}
+#footer p {
+  font-size: 13px;
+}
+#footer #back_top_id {
+  font-size: 30px;
+  color: rgb(231, 189, 72);
+} 
+
+/* Responsive padding */
+
+@media (max-width: 500px) {
+  .custom-navbar-space {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
+
+#navbar_first .nav .nav-link {
+  color: rgb(216, 201, 144);/* Link rengi root değişkeninden gelir */
+  font-size: 0.6rem; /* Küçük yazı boyutu */
+  padding: 2px 2px; /* Link iç boşlukları */
+  transition: color 0.3s ease; /* Renk değişimi için yumuşak geçiş efekti */
+
+}  
 #navbar_second .navbar-brand img {
   width: 50px;
   height: 50px;
   border-radius: 50%;
 }
-/* Responsive padding */
-.custom-navbar-space {
-  padding-left: 1rem;
-  padding-right: 1rem;
+.search-form input{
+  width: 130px;
+  height: 30px; 
+  border-radius: 10px 0px 0px 10px;
+  font-size: 14px;
 }
-@media (min-width: 576px) {
-  .custom-navbar-space {
-    padding-left: 2rem;
-    padding-right: 2rem;
-  }
+.search-form button{
+  width: 40px;    
+  height: 30px;
+  background-color: rgb(211, 181, 71);
+  border-radius: 0px 10px 10px 0px;
+  border: none;
+  font-size: 13px;
+  
+}
 }
 
-@media (min-width: 768px) {
+@media (min-width: 780px) {
   .custom-navbar-space {
     padding-left: 3rem;
     padding-right: 3rem;
+  }
+
+  #navbar_first .nav .nav-link {
+  color: rgb(216, 201, 144);/* Link rengi root değişkeninden gelir */
+  font-size: 0.8rem; /* Küçük yazı boyutu */
+  margin: 3px 3px; /* Link iç boşlukları */
+  transition: color 0.3s ease; /* Renk değişimi için yumuşak geçiş efekti */
+}  
+#navbar_second .navbar-brand img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+}
+.search-form input{
+  width: 160px;
+  height: 30px; 
+  border-radius: 10px 0px 0px 10px;
+  font-size: 12px;
+}
+.search-form button{
+  width: 40px;    
+  height: 30px;
+  background-color: rgb(211, 181, 71);
+  border-radius: 0px 10px 10px 0px;
+  border: none;
+  font-size: 13px;
+  
+}
+    header h2{
+  font-weight: bold;
+  font-size: 35px !important;
+  
+  }
+  header div{
+    width: 800px;
   }
 }
 
@@ -78,25 +239,50 @@ a {
     padding-left: 5rem;
     padding-right: 5rem;
   }
+
+  #navbar_first .nav .nav-link {
+  color: rgb(216, 201, 144);/* Link rengi root değişkeninden gelir */
+  font-size: 1rem; /* Küçük yazı boyutu */
+  margin: 4px 4px; /* Link iç boşlukları */
+  transition: color 0.3s ease; /* Renk değişimi için yumuşak geçiş efekti */
+
+}  
+#navbar_second .navbar-brand img {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+}
+.search-form input{
+  width: 200px;
+  height: 30px; 
+  border-radius: 10px 0px 0px 10px;
+  font-size: 14px;
+}
+.search-form button{
+  width: 40px;    
+  height: 30px;
+  background-color: rgb(211, 181, 71);
+  border-radius: 0px 10px 10px 0px;
+  border: none;
+  font-size: 13px;
+  
+}
+header h2{
+  font-weight: bold;
+  font-size: 60px;
+  
+  }
+  header div{
+    width: 900px;
+  }
+  #main-id #contact #col-1 {
+    width: 30%;
+    margin-top: 10px ;
+  }
+  #main-id #contact #col-2 {
+    width: 68%;
+    border-style: hidden hidden hidden double;
+    margin-top: 10px ;
+  } 
 }
 
-section {
-  background-color: rgb(29, 28, 28);
-}
-#section_title {
-  font-size: 35px;
-  text-align: center;
-  font-weight: bold;
-}
-#section_title::after {
-  display: block;
-  background-color: rgb(195, 146, 13);
-  width: 200px;
-  height: 3px;
-  content: "";
-  margin-top: 10px;
-  margin-bottom: 40px;
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-}
