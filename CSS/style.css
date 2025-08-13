@@ -47,11 +47,11 @@ a {
   position: absolute;
   min-width: unset;     /* Bootstrap'in 10rem varsayılanını kaldır */
   width: 150px;   
-  background-color:rgb(211, 181, 71);      /* Buraya istediğin değeri yaz */
+  background-color:rgb(200, 187, 152);    /* Buraya istediğin değeri yaz */
 }
 
 .dropdown-menu .dropdown-item:hover {
-  background-color: rgb(171, 138, 15);
+  background-color: rgb(182, 161, 104);
 }
 #navbar_second { 
   /* position: relative; */
@@ -76,7 +76,10 @@ a {
   left: 50%;
   transform: translateX(-50%);
 }
+#main-id  #tech {
+  scroll-margin-top: 150px; 
 
+}
 #main-id  #tech .col {
   background-color: rgb(83, 79, 79);
   margin: 20px;
@@ -102,6 +105,7 @@ a {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+  scroll-margin-top: 150px; 
 }
 #main-id #about .col-1 {   
   padding: 10px; 
@@ -120,6 +124,7 @@ a {
   #main-id #contact { 
   background-color:  rgb(83, 79, 79);
   margin-top: -20px;
+  scroll-margin-top: 150px; 
  }
 
 
@@ -150,10 +155,33 @@ a {
 #footer p {
   font-size: 13px;
 }
-#footer #back_top_id {
-  font-size: 30px;
+#back_top_id i {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  width: 2.1rem !important;
+  height: 2.1rem;
   color: rgb(231, 189, 72);
-} 
+  font-size: 1.4rem;
+  margin-right: 0.5rem;
+  margin-bottom: 0.5rem;
+  transition: all 1s;
+  padding-top: 0.3rem;
+}
+
+#back_top_id i:hover {
+  color: rgb(180, 163, 118);
+  font-size: 2rem;
+}
+
+/* line clamp */
+
+.line-clamp10 {
+  display: -webkit-box; /* vertical box */
+  overflow: hidden;
+  -webkit-line-clamp: 10;
+  -webkit-box-orient: vertical;
+}
 
 /* Responsive padding */
 
@@ -286,3 +314,13 @@ header h2{
   } 
 }
 
+/* search bar items from jquery */
+.ui-menu{
+  z-index: 4000;
+  background-color: rgb(200, 187, 152);
+}
+
+.ui-menu :hover {
+  background-color: rgb(182, 161, 104) !important ;
+  transition: background-color 0s ease;
+}
