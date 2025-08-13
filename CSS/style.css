@@ -155,7 +155,7 @@ a {
 #footer p {
   font-size: 13px;
 }
-#back_top_id i {
+#back_top_id {
   position: fixed;
   right: 0;
   bottom: 0;
@@ -167,9 +167,10 @@ a {
   margin-bottom: 0.5rem;
   transition: all 1s;
   padding-top: 0.3rem;
+  display: none;
 }
 
-#back_top_id i:hover {
+#back_top_id:hover {
   color: rgb(180, 163, 118);
   font-size: 2rem;
 }
