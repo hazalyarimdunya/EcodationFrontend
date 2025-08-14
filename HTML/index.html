@@ -20,7 +20,6 @@
     <!-- jQuery UI JS -->
     <script src="../node_modules/jquery-ui/dist/jquery-ui.min.js"></script>
 
-
     <!-- Bootstrap CSS -->
     <link
       rel="stylesheet"
@@ -32,6 +31,8 @@
       rel="stylesheet"
       href="../node_modules/@fortawesome/fontawesome-free/css/all.min.css"
     />
+    <!-- Alert -->
+    <script src="../node_modules/sweetalert2/dist/sweetalert2.all.min.js"></script>
 
     <!-- Google Font-->
     <link
@@ -72,6 +73,29 @@
                 data-bs-target="#myLoginModal"
               >
                 <i class="fa-solid fa-address-card"></i>
+              </a>
+            </li>
+            <!-- Admin Panel -->
+            <li class="nav-item">
+              <a
+                id="adminLink"
+                class="nav-link"
+                href="../admin/admin.html"
+                style="display: none"
+              >
+                <i class="fa fa-user-shield"></i>
+              </a>
+            </li>
+
+            <!-- Admin Panel -->
+            <li class="nav-item">
+              <a
+                id="logoutLink"
+                class="nav-link"
+                href="#"
+                style="display: none"
+              >
+                <i class="fa fa-sign-out-alt"></i>
               </a>
             </li>
           </ul>
@@ -144,33 +168,37 @@
             ></button>
           </div>
           <div class="modal-body">
-            <form action="" id="registerForm">
-              <div>
+            <form id="registerFormId" novalidate>
+              <div class="mb-3">
                 <input
                   type="email"
                   id="email"
                   class="form-control"
                   placeholder="Enter e-mail"
                 />
+                <!-- Hata mesajı burada görünecek -->
+                <div class="invalid-feedback"></div>
               </div>
-              <br />
-              <div>
+              <div class="mb-3">
                 <input
                   type="password"
                   id="pass"
                   class="form-control"
                   placeholder="Enter password"
                 />
+                <!-- Hata mesajı burada görünecek -->
+                <div class="invalid-feedback"></div>
               </div>
-              <br />
 
-              <div>
+              <div class="mb-3">
                 <input
                   type="password"
                   id="repass"
                   class="form-control"
                   placeholder="Enter password"
                 />
+                <!-- Hata mesajı burada görünecek -->
+                <div class="invalid-feedback"></div>
               </div>
               <div class="modal-footer">
                 <button
@@ -183,7 +211,7 @@
                 <button
                   type="submit"
                   class="btn btn-primary"
-                  form="registerForm"
+                  form="registerFormId"
                 >
                   Register
                 </button>
@@ -207,23 +235,32 @@
             ></button>
           </div>
           <div class="modal-body">
-            <form action="" class="loginForm">
-              <div>
+            <form id="loginFormId">
+              <div class="mb-3">
                 <input
-                  id="email"
+                  id="emailLogin"
                   type="email"
                   class="form-control"
                   placeholder="Enter e-mail"
                 />
+                <div class="invalid-feedback"></div>
               </div>
-              <br />
 
-              <div>
+              <div class="mb-3">
                 <input
-                  id="pass"
+                  id="passLogin"
                   type="password"
                   class="form-control"
                   placeholder="Enter password"
+                />
+                <div class="invalid-feedback"></div>
+              </div>
+              <!-- Beni Hatırla -->
+              <div class="form-check mb-3">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  id="rememberMe"
                 />
               </div>
             </form>
@@ -236,7 +273,7 @@
             >
               Close
             </button>
-            <button type="submit" class="btn btn-primary" form="loginForm">
+            <button type="submit" class="btn btn-primary" form="loginFormId">
               Submit
             </button>
           </div>
@@ -322,7 +359,7 @@
     <main id="main-id">
       <section class="container-fluid" id="tech">
         <div class="row justify-content-center text-center bg-dark">
-          <h3 id="section_title" class="title-1" >TECHNOLOJIES</h3>
+          <h3 id="section_title" class="title-1">TECHNOLOJIES</h3>
           <div class="col col-sm-12 col-md-4 col-lg-4 text-center">
             <div id="section-icons">
               <i class="fa-brands fa-html5"></i>
@@ -457,36 +494,38 @@
       </section>
     </main>
 
-    
     <!-- Footer -->
     <footer class="container-fluid bg-dark" id="footer">
       <div class="d-flex flex-column align-items-center">
-          <div class="d-flex justify-content-center" id="col-1">
-            <a href="https://github.com/hazalyarimdunya" class="nav-link"
-              ><i class="fa-brands fa-github"></i
-            ></a>
-            <a
-              href="https://tr.linkedin.com/in/hazal-yarimdünya-a47751190"
-              class="nav-link"
-              ><i class="fa-brands fa-linkedin"></i
-            ></a>
-            <a href="https://www.instagram.com/hazal_yrmdny/" class="nav-link"
-              ><i class="fa-brands fa-instagram"></i
-            ></a>
-            <a href="#" class="nav-link"
-              ><i class="fa-brands fa-facebook"></i
-            ></a>
-          </div>
-          <div class="d-flex justify-content-center">
-            <i class="fa-regular fa-copyright me-1"></i>
-            <p class="mb-0">2024-2025 Code Diary All Rights Reserved</p>
-          </div>
-        
+        <div class="d-flex justify-content-center" id="col-1">
+          <a href="https://github.com/hazalyarimdunya" class="nav-link"
+            ><i class="fa-brands fa-github"></i
+          ></a>
+          <a
+            href="https://tr.linkedin.com/in/hazal-yarimdünya-a47751190"
+            class="nav-link"
+            ><i class="fa-brands fa-linkedin"></i
+          ></a>
+          <a href="https://www.instagram.com/hazal_yrmdny/" class="nav-link"
+            ><i class="fa-brands fa-instagram"></i
+          ></a>
+          <a href="#" class="nav-link"><i class="fa-brands fa-facebook"></i></a>
+        </div>
+        <div class="d-flex justify-content-center">
+          <i class="fa-regular fa-copyright me-1"></i>
+          <p class="mb-0">
+            2024-
+            <span id="footer_year"></span>
+            Code Diary All Rights Reserved
+          </p>
+        </div>
       </div>
     </footer>
 
-        <!-- Back to Top -->
-        <a id="back_top_id" href="#back_top_span"><i class="fa-regular fa-circle-up"></i></a>
+    <!-- Back to Top -->
+    <a id="back_top_id" href="#back_top_span"
+      ><i class="fa-regular fa-circle-up"></i
+    ></a>
 
     <!-- JS Import -->
     <noscript>
